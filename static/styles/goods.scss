@@ -1,0 +1,126 @@
+@import "colors.css";
+@import "components/header";
+@import "components/menu";
+@import "components/footer";
+
+@import "components/callbackBtn";
+@import "components/modal";
+
+.goods {
+  .hero {
+    text-align: center;
+    padding-top: 100px;
+    background: url("../../main/templates/main/img/mobHeroBg.jpg");
+    background-size: cover;
+    height: 90vh;
+    margin-bottom: 30px;
+    .title {
+      margin-top: 120px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 42px 0;
+      font-weight: 500;
+      font-size: 30px;
+      margin-bottom: 70px;
+      color: #fff;
+      background-color: rgba($blue, 0.5);
+    }
+  }
+  .gallery {
+    margin-bottom: 40px;
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 6px;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      top: 0;
+      color: white;
+      height: 120%;
+      padding: 0 5px;
+      background-color: rgba($color: #000000, $alpha: 0.4);
+      display: none;
+    }
+    .swiper-button-prev {
+      left: 0;
+    }
+    .swiper-button-next {
+      right: 0;
+    }
+  }
+  .about {
+    margin: 0 15px;
+    background-color: #f1f5fc;
+    border-radius: 15px;
+    margin-bottom: 39px;
+    padding: 34px 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .goods {
+    .hero {
+      height: 500px;
+      background: url("../../main/templates/main/img/gBg.jpg");
+      background-size: cover;
+      .title {
+        margin-top: 140px;
+        width: 40%;
+        font-size: 50px;
+        margin-bottom: 40px;
+        background-color: rgba(#000000, 0.4);
+      }
+    }
+    .gallery {
+      margin-bottom: 40px;
+      img {
+        display: block;
+        width: 100%;
+        height: 340px;
+        border-radius: 6px;
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        padding: 0 15px;
+        display: block;
+      }
+      .swiper-button-prev {
+        &:after {
+          position: relative;
+          bottom: -38%;
+        }
+      }
+      .swiper-button-next {
+        &:after {
+          position: relative;
+          bottom: -38%;
+        }
+      }
+    }
+    .about {
+      margin: 0 auto;
+      margin-bottom: 78px;
+      padding: 44px;
+      font-size: 18px;
+      line-height: 24px;
+      h2 {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: 30px;
+        margin-bottom: 30px;
+
+        &::after {
+          content: " ";
+          margin-left: 55px;
+          display: block;
+          width: 50%;
+          height: 3px;
+          background-color: rgba($orange, 0.2);
+        }
+      }
+    }
+  }
+}

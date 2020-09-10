@@ -1,0 +1,219 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 997;
+  .menuAndLogo {
+    z-index: 999;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    box-shadow: 3px 3px 8px rgba(184, 184, 184, 0.21);
+    .menu-btn {
+      flex: 0;
+      margin-left: 22px;
+      padding: 6px;
+      span {
+        display: block;
+        height: 4px;
+        width: 18px;
+        background-color: #200d01;
+        margin-bottom: 3px;
+        transition: all .2s ease-in-out;
+        &:nth-child(2) {
+          width: 12px;
+        }
+      }
+    }
+
+    .active {
+      span {
+        transition: all .2s ease-in-out;
+      }
+      span:first-child {
+        
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      span:nth-child(2) {
+        transform: translateX(-15px);
+        opacity: 0;
+      }
+      span:last-child {
+        transform: rotate(-45deg)  translate(5px, -5px);
+      }
+    }
+
+    .logo {
+      flex: 1;
+      position: fixed;
+    }
+
+    .invs {
+      display: block;
+      margin-left: auto;
+      background-color: #fff;
+      width: 300px;
+      height: 20px;
+      flex: 0;
+    }
+  }
+  .phones {
+    padding: 15px 13px;
+    background-color: rgba($blue, 0.85);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    .phones__number {
+      display: flex;
+      align-items: center;
+      color: #fff;
+      text-decoration: none;
+      align-self: center;
+      img {
+        margin-right: 10px;
+      }
+    }
+  }
+  .desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header {
+    .menuAndLogo {
+      padding-bottom: 35px;
+      .menu-btn {
+        display: none;
+      }
+      .logo {
+       width: 155px;
+      }
+    }
+    .phones {
+      display: none;
+    }
+    .desktop {
+      padding-top: 20px;
+      background-color: $blue;
+      color: #fff;
+      display: block;
+      .location {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 35px;
+        .phones {
+          padding: 0;
+          display: flex;
+          .phones__number:first-child {
+            margin-right: 15px;
+          }
+        }
+        .city {
+          display: flex;
+          align-items: center;
+          .city__img {
+            margin-right: 10px;
+          }
+        }
+        .schedule {
+          .schedule__item {
+            margin-right: 10px;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+      .desktopNav {
+        padding-bottom: 20px;
+        display: flex;
+        .desktopNav__link {
+          cursor: pointer;
+          padding: 15px 20px;
+          margin-right: 25px;
+          color: #fff;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-weight: 500;
+          font-size: 14px;
+          &:hover {
+             background-color: darken($brown, 5);
+            border-radius: 3px;
+          }
+        }
+        .desktopNav__link--active {
+          background-color: darken($brown, 5);
+          border-radius: 3px;
+        }
+        .dropdown {
+          position: relative;
+          .dropdown__title {
+            cursor: pointer;
+            padding: 15px 12px;
+            margin-right: 25px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 14px;
+          }
+          .dropdown__content {
+            box-shadow: 0px 4px 12px rgba(122, 129, 136, 0.17);
+            display: none;
+            width: 123%;
+            padding: 12px 9px;
+            padding-bottom: 15px;
+            position: absolute;
+            background: #fff;
+            border-radius: 3px;
+            .dropdown__content__link {
+              text-decoration: none;
+              display: block;
+              color: #000;
+              padding: 9px 17px;
+              border-radius: 2px;
+              &:hover {
+                background-color: #FFECDF;
+                color: $brown;
+              }
+            }
+            .dropdown__content__link--blue {
+              cursor: default;
+              text-decoration: none;
+              display: block;
+              color: lighten($blue, 25);
+              padding: 9px 17px;
+              border-radius: 2px;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              &::before, &::after {
+                content: "";
+                width: 60px;
+                height: 3px;
+                background-color: lighten($blue, 25);
+                display: block;
+              }
+              &:hover {
+                background-color: #fff;
+                color: $blue;
+              }
+            }
+          }
+          &::after {
+            position: absolute;
+            content: "▼";
+            top: 12px;
+            left: 86%
+          }
+          &:hover .dropdown__content {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

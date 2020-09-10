@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../fonts/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../fonts/ProximaNova-Semibold.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../fonts/ProximaNova-Bold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+html,
+body {
+  font-family: "ProximaNova", sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 0 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */

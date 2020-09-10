@@ -1,0 +1,15 @@
+.footer {
+  background-color: $brown;
+  text-align: center;
+  padding: 20px 0;
+  color: #fff;
+  a {
+    text-decoration: none;
+    svg {
+      fill: white;
+    }
+    svg:hover {
+      fill: darken($brown, 20);
+    } 
+  }
+}

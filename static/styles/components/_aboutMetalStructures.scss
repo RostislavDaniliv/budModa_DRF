@@ -1,0 +1,61 @@
+.aboutMetalStructures {
+  .title {
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .tips {
+    .tips__item {
+      position: relative;
+      padding: 24px 20px;
+      box-shadow: 0px 4px 12px rgba(122, 129, 136, 0.17);
+      border-radius: 10px;
+      margin-bottom: 25px;
+      cursor: pointer;
+      overflow: hidden;
+      .tips__item__text {
+        font-weight: bold;
+        padding-bottom: 28px;
+        border-bottom: 2px solid darken($brown, $amount: 7);
+      }
+      .tips__item__answer {
+        transition: top .3s ease;
+        position: absolute;
+        background-color: $brown;
+        color: #fff;
+        top: 100%;
+        left: 0;
+        height: calc(100% - 20px);
+        width: calc(100% - 20px);
+        border-radius: 4px;
+        padding: 10px;
+      }
+      &:hover > .tips__item__answer {
+        top: 0;
+        transition: top .3s ease;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .aboutMetalStructures {
+    background: url("../img/ladderBg.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 105%;
+    background-position-y: 20%;
+    padding-bottom: 20px;
+    margin-bottom: 150px;
+    .title {
+      font-size: 40px;
+      text-align: left;
+      margin-bottom: 36px;
+    }
+    .tips {
+      display: grid;
+      grid-template-columns: repeat(2, 32%);
+      gap: 30px;
+    }
+  }
+}

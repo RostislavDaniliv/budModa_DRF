@@ -1,0 +1,122 @@
+@import "colors.css";
+@import "components/header";
+@import "components/menu";
+
+@import "components/callbackBtn";
+
+.callback {
+  padding-top: 150px;
+  text-align: center;
+  h3 {
+    margin-bottom: 4px;
+    font-size: 17px;
+  }
+  span {
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 0.3px;
+    font-weight: 500;
+  }
+  form {
+    input {
+      width: 220px;
+      padding: 2px 4px;
+      border: none;
+      border-bottom: 1px solid #000;
+      margin-bottom: 22px;
+      font-size: 12px;
+      &:last-child {
+        margin-bottom: 38px;
+      }
+      &::placeholder {
+        color: #000;
+        font-weight: 500;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.contacts {
+  padding-top: 35px;
+  padding-bottom: 100px;
+  background-color: $blue;
+  color: #fff;
+  .contact {
+    background-color: rgba(lighten($blue, 90), 0.04);
+    margin: 0 30px;
+    margin-bottom: 30px;
+    padding: 22px 24px;
+    border-radius: 10px;
+    .contact__title {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+    .contact__text {
+      display: block;
+      margin-bottom: 5px;
+      .contact__text__link {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+    a {
+      text-decoration: none;
+      svg {
+        fill: white;
+        &:hover {
+          fill: lighten($blue, 20);
+        }
+      }
+    }
+  }
+}
+
+.map {
+  width: 100%;
+  height: 350px;
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    min-height: 50vh;
+  }
+  .main {
+    margin-top: 205px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .callback {
+  padding-top: 150px;
+  margin-right: 150px;
+  text-align: center;
+  img {
+    width: 63px;
+    margin-bottom: 10px;
+  }
+  form {
+    input {
+      display: block;
+      width: 320px;
+      font-size: 14px;
+      &::placeholder {
+        font-size: 14px;
+      }
+    }
+  }
+}
+  .contacts {
+    display: flex;
+    padding-bottom: 25px;
+    .contact {
+      width: 300px;
+      margin-bottom: 0;
+    }
+  }
+  .map {
+    width: 65%;
+    height: 70vh;
+  }
+}

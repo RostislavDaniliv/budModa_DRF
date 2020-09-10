@@ -1,0 +1,30 @@
+.services {
+  .service {
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-bottom: 25px;
+    img {
+      width: 100%;
+    }
+    .service__text {
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      color: #fff;
+      background-color: rgba(darken($brown, 12), 0.55);
+      width: calc(100% - 26px);
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      padding: 17px 13px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+}
