@@ -84,7 +84,7 @@ DATABASES = {
         'NAME': 'budmoda_drf',
         'ENGINE': 'django.db.backends.mysql',
         'USER': 'root',
-        'PASSWORD': '127896354a',
+        'PASSWORD': '',
         'HOST': 'localhost',
     }
 }
